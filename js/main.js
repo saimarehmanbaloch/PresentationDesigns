@@ -21,22 +21,34 @@ if (navToggle && mobileNav) {
 const grid = document.getElementById('deckGrid');
 const filtersEl = document.getElementById('filters');
 
-function monogram(title) {
-  return title.split(' ').filter(Boolean).slice(0, 2).map(w => w[0].toUpperCase()).join('');
-}
+function cardHTML(deck, index) {
+  const number = String(index + 1).padStart(2, '0');
 
-function cardHTML(deck) {
   const thumb = deck.thumb
-    ? `<div class="deck-thumb"><img src="${deck.thumb}" alt=""></div>`
-    : `<div class="deck-thumb">${monogram(deck.title)}</div>`;
+    ? `<div class="deck-thumb"><span class="deck-number">${number}</span><img src="${deck.thumb}" alt="${deck.title}"></div>`
+    : `<div class="deck-thumb"><span class="deck-number">${number}</span></div>`;
+
+  const tags = (deck.tags || [])
+    .map(t => `<span class="tag">${t}</span>`)
+    .join('');
+
+  const assets = (deck.assets || [])
+    .map(a => `<a class="asset-link" href="${a.href}">${a.label} →</a>`)
+    .join('');
+
   return `
     <article class="deck-card">
       ${thumb}
       <div class="deck-body">
-        <p class="deck-cat">${deck.category}</p>
-        <h3 class="deck-title">${deck.title}</h3>
+        <div class="deck-meta">
+          <span>${deck.category}</span>
+          <span>${deck.year || ''}</span>
+        </div>
+        <h3>${deck.title}</h3>
+        ${deck.client ? `<p class="deck-client">${deck.client}</p>` : ''}
         <p class="deck-desc">${deck.description}</p>
-        <a class="deck-link" href="${deck.link}">View project →</a>
+        ${tags ? `<div class="deck-tags">${tags}</div>` : ''}
+        ${assets ? `<div class="deck-assets">${assets}</div>` : ''}
       </div>
     </article>`;
 }
@@ -44,7 +56,7 @@ function cardHTML(deck) {
 function renderDecks(filter = 'All') {
   if (!grid) return;
   const list = filter === 'All' ? decks : decks.filter(d => d.category === filter);
-  grid.innerHTML = list.map(cardHTML).join('');
+  grid.innerHTML = list.map((d, i) => cardHTML(d, i)).join('');
 }
 
 function renderFilters() {
