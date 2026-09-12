@@ -41,9 +41,8 @@ function cardHTML(deck, index) {
       ${thumb}
       <div class="deck-body">
         <div class="deck-meta">
-          <span>${deck.category}</span>
-          <span>${deck.year || ''}</span>
-        </div>
+  <span>${deck.category}</span>
+</div>
         <h3>${deck.title}</h3>
         ${deck.client ? `<p class="deck-client">${deck.client}</p>` : ''}
         <p class="deck-desc">${deck.description}</p>
