@@ -1,136 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Saima Rehman Baloch — Presentation Portfolio</title>
-    <style>
-        :root {
-            --primary: #1a1a2e;
-            --accent: #e94560;
-            --bg: #fafafa;
-            --card: #ffffff;
-            --text: #2d2d2d;
-            --muted: #6b7280;
-        }
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background: var(--bg);
-            color: var(--text);
-            line-height: 1.6;
-        }
-        .container { max-width: 960px; margin: 0 auto; padding: 0 24px; }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Saima Rehman Baloch — Presentation Design</title>
+<meta name="description" content="Presentation and slide design portfolio of Saima Rehman Baloch — brand decks, investor pitches, keynotes, and conference talks.">
 
-        /* Hero */
-        header {
-            background: var(--primary);
-            color: #fff;
-            padding: 72px 0 56px;
-            text-align: center;
-        }
-        header h1 { font-size: 2.2rem; font-weight: 700; letter-spacing: -0.5px; }
-        header p { color: #c7c7d1; margin-top: 12px; font-size: 1.05rem; }
-        .accent { color: var(--accent); }
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 
-        /* Section headings */
-        .section-title {
-            font-size: 1.4rem;
-            font-weight: 600;
-            margin: 56px 0 24px;
-            padding-bottom: 8px;
-            border-bottom: 2px solid var(--accent);
-            display: inline-block;
-        }
-
-        /* Cards grid */
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 24px;
-            margin-bottom: 64px;
-        }
-        .card {
-            background: var(--card);
-            border-radius: 10px;
-            padding: 28px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-            display: flex;
-            flex-direction: column;
-        }
-        .card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-        }
-        .card h3 { font-size: 1.15rem; margin-bottom: 10px; }
-        .card p { color: var(--muted); font-size: 0.95rem; flex-grow: 1; }
-        .card a {
-            margin-top: 18px;
-            color: var(--accent);
-            font-weight: 600;
-            text-decoration: none;
-            font-size: 0.95rem;
-            align-self: flex-start;
-        }
-        .card a:hover { text-decoration: underline; }
-
-        /* Footer */
-        footer {
-            text-align: center;
-            padding: 40px 0;
-            color: var(--muted);
-            font-size: 0.9rem;
-            border-top: 1px solid #e5e7eb;
-        }
-        footer a { color: var(--primary); text-decoration: none; font-weight: 500; }
-        footer a:hover { color: var(--accent); }
-    </style>
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-<header>
-    <div class="container">
-        <h1>Saima Rehman <span class="accent">Baloch</span></h1>
-        <p>Presentation Designer &amp; Automation Builder</p>
-    </div>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="#top">Saima Rehman Baloch</a>
+    <nav class="site-nav" aria-label="Primary">
+      <a href="#about">About</a>
+      <a href="#library">Decks</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="mobileNav" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <nav class="mobile-nav" id="mobileNav" aria-label="Mobile">
+    <a href="#about">About</a>
+    <a href="#library">Decks</a>
+    <a href="#contact">Contact</a>
+  </nav>
 </header>
 
-<main class="container">
+<main id="main">
 
-    <h2 class="section-title">Presentations</h2>
-    <div class="grid">
-
-        <!-- ⬇️ COPY THIS BLOCK FOR EACH PRESENTATION ⬇️ -->
-        <div class="card">
-            <h3>Presentation Title</h3>
-            <p>A short description of what this presentation covers and who it's for.</p>
-            <a href="./presentations/example.html">View Presentation →</a>
-        </div>
-        <!-- ⬆️ COPY THIS BLOCK FOR EACH PRESENTATION ⬆️ -->
-
+  <!-- ============ HERO / TITLE SLIDE ============ -->
+  <section class="hero" id="top">
+    <div class="wrap hero-inner">
+      <p class="hero-kicker">Deck 01 — Title</p>
+      <h1 class="hero-title">
+        Presentations that hold<br> a room's attention.
+      </h1>
+      <p class="hero-sub">
+        I'm Saima Rehman Baloch, a presentation and slide designer.
+        I build decks for founders, teams, and speakers who need their
+        ideas to land — on stage, in a boardroom, or in an inbox.
+      </p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#library">See the decks</a>
+        <a class="btn btn-ghost" href="#about">About me</a>
+      </div>
     </div>
+  </section>
 
-    <h2 class="section-title">Automation &amp; Workflows</h2>
-    <div class="grid">
+  <!-- ============ ABOUT ============ -->
+  <section class="about" id="about">
+    <div class="wrap about-inner">
+      <div class="about-photo">
+        <img src="img/profile-placeholder.svg" alt="Portrait of Saima Rehman Baloch" width="320" height="320">
+      </div>
+      <div class="about-content">
+        <p class="section-kicker">About</p>
+        <h2>Deck design, from outline to final export.</h2>
+        <p>
+          I work with founders, marketing teams, and speakers to turn a
+          messy outline into a deck that actually gets read — clear
+          structure, one idea per slide, and a visual system that holds
+          together for 60 slides or six. Every project on this page went
+          out the door and got presented for real.
+        </p>
+        <p>
+          My process usually starts with your existing content: a doc,
+          a script, or last year's deck. I restructure the narrative
+          first, then design the system it lives in — so the deck reads
+          well before it ever looks good.
+        </p>
 
-        <!-- ⬇️ COPY THIS BLOCK FOR EACH WORKFLOW ⬇️ -->
-        <div class="card">
-            <h3>n8n Workflow Title</h3>
-            <p>Description of the automation — tools used, problem solved, outcome.</p>
-            <a href="./automation/example.html">View Workflow →</a>
+        <ul class="about-facts" aria-label="Areas of focus">
+          <li><span>Formats</span>Keynotes, pitch decks, conference talks, reports</li>
+          <li><span>Tools</span>PowerPoint, Keynote, Google Slides, Figma</li>
+          <li><span>Based in</span>Punjab, Pakistan — working with clients remotely</li>
+        </ul>
+
+        <div class="about-links">
+          <a href="mailto:hello@example.com">hello@example.com</a>
+          <a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://github.com/saimarehmanbaloch" target="_blank" rel="noopener">GitHub</a>
         </div>
-        <!-- ⬆️ COPY THIS BLOCK FOR EACH WORKFLOW ⬆️ -->
-
+      </div>
     </div>
+  </section>
+
+  <!-- ============ DECK LIBRARY ============ -->
+  <section class="library" id="library">
+    <div class="wrap">
+      <div class="library-head">
+        <div>
+          <p class="section-kicker">Selected work</p>
+          <h2>The deck library</h2>
+        </div>
+        <p class="library-note">Every deck below was designed for a real presentation.</p>
+      </div>
+
+      <div class="filters" id="filters" role="group" aria-label="Filter by category"></div>
+
+      <div class="deck-grid" id="deckGrid"></div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT / CLOSING SLIDE ============ -->
+  <section class="closing" id="contact">
+    <div class="wrap closing-inner">
+      <p class="hero-kicker">Closing slide</p>
+      <h2>Have a deck that needs work?</h2>
+      <p class="closing-sub">
+        Whether it's a pitch, a keynote, or fifty slides you need turned
+        around by Friday — send over what you have and I'll tell you
+        what it needs.
+      </p>
+      <a class="btn btn-primary" href="mailto:hello@example.com">hello@example.com</a>
+    </div>
+  </section>
 
 </main>
 
-<footer>
-    <div class="container">
-        <p>© 2026 Saima Rehman Baloch · <a href="https://github.com/saimarehmanbaloch">GitHub</a></p>
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <p>&copy; <span id="year"></span> Saima Rehman Baloch. All decks shown belong to their respective clients.</p>
+    <div class="footer-links">
+      <a href="mailto:hello@example.com">Email</a>
+      <a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://github.com/saimarehmanbaloch" target="_blank" rel="noopener">GitHub</a>
     </div>
+  </div>
 </footer>
 
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>
