@@ -1,0 +1,8 @@
+<svg viewBox="0 0 640 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Product launch keynote thumbnail placeholder">
+  <rect width="640" height="360" fill="#14192B"/>
+  <circle cx="320" cy="180" r="150" fill="none" stroke="#D6A24B" stroke-width="1.5" opacity="0.4"/>
+  <circle cx="320" cy="180" r="105" fill="none" stroke="#D6A24B" stroke-width="1.5" opacity="0.25"/>
+  <rect x="280" y="140" width="80" height="80" rx="14" fill="#D6A24B"/>
+  <text x="320" y="290" text-anchor="middle" font-family="Georgia, serif" font-size="30" fill="#FAF8F3">Launch: Halo</text>
+  <text x="320" y="316" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="15" fill="#7C8394">Keynote deck, 42 slides</text>
+</svg>
