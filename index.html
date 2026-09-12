@@ -3,24 +3,134 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Saima Rehman - Presentations</title>
+    <title>Saima Rehman Baloch — Presentation Portfolio</title>
     <style>
-        body { font-family: sans-serif; max-width: 800px; margin: 40px auto; padding: 0 20px; line-height: 1.6; }
-        h1 { color: #333; }
-        .presentation { border: 1px solid #ddd; padding: 20px; margin: 20px 0; border-radius: 8px; }
-        a { color: #0366d6; text-decoration: none; font-weight: bold; }
-        a:hover { text-decoration: underline; }
+        :root {
+            --primary: #1a1a2e;
+            --accent: #e94560;
+            --bg: #fafafa;
+            --card: #ffffff;
+            --text: #2d2d2d;
+            --muted: #6b7280;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+        .container { max-width: 960px; margin: 0 auto; padding: 0 24px; }
+
+        /* Hero */
+        header {
+            background: var(--primary);
+            color: #fff;
+            padding: 72px 0 56px;
+            text-align: center;
+        }
+        header h1 { font-size: 2.2rem; font-weight: 700; letter-spacing: -0.5px; }
+        header p { color: #c7c7d1; margin-top: 12px; font-size: 1.05rem; }
+        .accent { color: var(--accent); }
+
+        /* Section headings */
+        .section-title {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin: 56px 0 24px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid var(--accent);
+            display: inline-block;
+        }
+
+        /* Cards grid */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 24px;
+            margin-bottom: 64px;
+        }
+        .card {
+            background: var(--card);
+            border-radius: 10px;
+            padding: 28px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            display: flex;
+            flex-direction: column;
+        }
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        }
+        .card h3 { font-size: 1.15rem; margin-bottom: 10px; }
+        .card p { color: var(--muted); font-size: 0.95rem; flex-grow: 1; }
+        .card a {
+            margin-top: 18px;
+            color: var(--accent);
+            font-weight: 600;
+            text-decoration: none;
+            font-size: 0.95rem;
+            align-self: flex-start;
+        }
+        .card a:hover { text-decoration: underline; }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 40px 0;
+            color: var(--muted);
+            font-size: 0.9rem;
+            border-top: 1px solid #e5e7eb;
+        }
+        footer a { color: var(--primary); text-decoration: none; font-weight: 500; }
+        footer a:hover { color: var(--accent); }
     </style>
 </head>
 <body>
-    <h1>Saima Rehman's Presentation Portfolio</h1>
-    <p>Welcome to my collection of presentations and slide decks.</p>
 
-    <!-- Copy this block for each presentation -->
-    <div class="presentation">
-        <h2>Presentation Title</h2>
-        <p>A short description of what this presentation is about.</p>
-        <a href="./link-to-your-presentation.html">View Presentation</a>
+<header>
+    <div class="container">
+        <h1>Saima Rehman <span class="accent">Baloch</span></h1>
+        <p>Presentation Designer &amp; Automation Builder</p>
     </div>
+</header>
+
+<main class="container">
+
+    <h2 class="section-title">Presentations</h2>
+    <div class="grid">
+
+        <!-- ⬇️ COPY THIS BLOCK FOR EACH PRESENTATION ⬇️ -->
+        <div class="card">
+            <h3>Presentation Title</h3>
+            <p>A short description of what this presentation covers and who it's for.</p>
+            <a href="./presentations/example.html">View Presentation →</a>
+        </div>
+        <!-- ⬆️ COPY THIS BLOCK FOR EACH PRESENTATION ⬆️ -->
+
+    </div>
+
+    <h2 class="section-title">Automation &amp; Workflows</h2>
+    <div class="grid">
+
+        <!-- ⬇️ COPY THIS BLOCK FOR EACH WORKFLOW ⬇️ -->
+        <div class="card">
+            <h3>n8n Workflow Title</h3>
+            <p>Description of the automation — tools used, problem solved, outcome.</p>
+            <a href="./automation/example.html">View Workflow →</a>
+        </div>
+        <!-- ⬆️ COPY THIS BLOCK FOR EACH WORKFLOW ⬆️ -->
+
+    </div>
+
+</main>
+
+<footer>
+    <div class="container">
+        <p>© 2026 Saima Rehman Baloch · <a href="https://github.com/saimarehmanbaloch">GitHub</a></p>
+    </div>
+</footer>
+
 </body>
 </html>
